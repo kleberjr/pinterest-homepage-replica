@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ======= GENERAL ======= */
+
+header {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: 47px;
+    padding: 15px;
+    z-index: 2;
+    
+    background-color: white;
+
+    font-weight: bold;
+}
+
+#left-wrapper, #right-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
+#left-wrapper {
+    width: 240px;
+    min-width: 240px;
+}
+
+#right-wrapper {
+    gap: 1px;
+    width: 168px;
+    min-width: 168px;
+}
+
+
+
+/* ======= SEARCH BOX ======= */
+
+#search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    min-width: 400px;
+}
+
+input {
+    width: 92%;
+    height: 90%;
+    padding: 0px 15px;
+    border: 1px solid rgb(239, 239, 239);
+    border-radius: 35px;
+    outline: none;
+
+    background-color: rgb(239, 239, 239);
+
+    font-size: 0.95em;
+}
+
+::-webkit-input-placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.05em;
+}
+
+
+
+/* ======= IMAGES ======= */
+
+.logo-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 95%;
+    padding: 0px 10px;
+    border-radius: 100%;
+}
+
+.logo-img:hover {
+    background-color: rgb(239, 239, 239);
+}
+
+header img {
+    width: 25px;
+    clip-path: circle(50% at 50% 50%);
+}
+
+
+
+/* ======= BUTTONS ======= */
+
+#hoje {
+    background-color: inherit;
+    color: inherit;
+}
+
+#hoje:hover {
+    background-color: rgb(239, 239, 239);
+}
+
+.button {
+    /* Alinha o conteúdo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* A largura se ajusta ao tamanho do conteúdo,
+    enquanto a altura ocupa 100% do header. */
+    width: auto;
+    height: 100%;
+    padding: 0px 15px;
+
+    border-radius: 35px;
+
+    background-color: black;
+    color: white;
+
+    font-size: 0.98em;
+
+    cursor: pointer;
+}
+
+
+
+/* ======= ICONS ======= */
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 95%;
+    padding: 0px 12px;
+    border-radius: 100%;
+    
+    font-size: 1.5em;
+    color: rgb(88, 88, 88);
+}
+
+.icon:hover {
+    background-color: rgb(239, 239, 239);
+}
+
+#chevron-down {
+    height: 50%;
+    padding: 0px 5px;
+    
+    font-size: initial;
+}
+
+#search-icon {
+    display: none;
+}

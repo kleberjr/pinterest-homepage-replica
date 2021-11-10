@@ -1,0 +1,92 @@
+/* ========= TABLET STYLES ========= */
+
+@media only screen and (max-width: 855px) and (min-width: 800px) {
+    header > #left-wrapper > #hoje {
+        display: none;
+    }
+
+    header > #left-wrapper {
+        min-width: 176px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    header > #search-box, header > #left-wrapper > #hoje {
+        display: none;
+    }
+
+    header > #left-wrapper {
+        justify-content: start;
+    }
+
+    header > #left-wrapper > .button {
+        background-color: white;
+        color: black;
+        
+        gap: 5px;
+    }
+
+    header > #left-wrapper > .button::after {
+        content: " \f078";
+        
+        font-family: "Font Awesome 5 Free";
+        font-size: 0.9em;
+        font-weight: 900;
+    }
+
+    header > #left-wrapper > .button:hover {
+        background-color: rgb(239, 239, 239);
+    }
+
+    header > #right-wrapper > #search-icon {
+        display: inherit;
+ 
+        font-size: 1.4rem;
+    }
+
+    header > #right-wrapper {
+        min-width: 215px;
+    }
+}
+
+
+/* ========= MOBILE STYLES ========= */
+
+@media only screen and (max-width: 500px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    header > #left-wrapper {
+        justify-content: center;
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgb(197, 197, 197);
+    }
+
+    header > #left-wrapper > #hoje {
+        display: inherit;
+    }
+
+    header > #left-wrapper .button::after {
+        content: none;
+    }
+
+    main {
+        margin: 10px auto;
+    }
+
+    .icon {
+        height: 45px;
+    }
+
+    .logo-img {
+        height: 45px;
+    }
+
+    header > #right-wrapper {
+        padding-top: 10px;
+    }
+}

@@ -1,0 +1,122 @@
+main {
+    width: 90%;
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+#columns {
+    /* Evita que as colunas tenham menos de 200px
+    de largura e permite que sejam criadas tantas
+    colunas quanto forem necessárias. */
+    columns: 215px auto;
+    column-gap: 15px;
+    column-fill: auto;
+}
+
+.pin {
+    /* Necessário para posicionar os botões */
+    position: relative;
+    /* Evita que o conteúdo de um pin seja quebrado */
+    break-inside: avoid;
+    
+    margin-bottom: 10px;
+}
+
+.pin img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.pin:hover img {
+    filter: brightness(65%);
+    cursor: zoom-in;
+}
+
+
+
+/* =========== PIN BUTTONS =========== */
+
+.save-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    height: 40px;
+    padding: 0px 15px;
+    border: none;
+    border-radius: 45px;
+
+    background-color: rgb(226, 0, 0);
+    color: white;
+
+    font-size: 1.03em;
+    font-weight: bold;
+
+    visibility: hidden;
+}
+
+.interaction-buttons {
+    position: absolute;
+    bottom: 14px;
+    right: 9px;
+
+    visibility: hidden;
+}
+
+.inbox-button, .options-button {
+    height: 35px;
+    width: 35px;
+    border: none;
+    border-radius: 100%;
+
+    background-color: rgba(255, 255, 255, 0.726);
+
+    font-size: 1.03em;
+}
+
+
+.pin:hover button {
+    visibility: visible;
+}
+
+
+
+/* ========= FIXED BUTTONS ========= */
+
+.fixed-buttons {
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fixed-buttons button {
+    height: 55px;
+    width: 55px;
+    border: 1px solid white;
+    border-radius: 100%;
+
+    background-color: white;
+
+    box-shadow: 0px 0px 20px -9px rgb(0 0 0 / 50%);
+    font-weight: bold;
+}
+
+.fixed-buttons button:nth-child(1) {
+    font-size: 2em;
+}
+
+.fixed-buttons button:nth-child(2) {
+    font-size: 1.5em;
+}
+
+.fixed-buttons button:hover {
+    border: 1px solid rgb(239, 239, 239);
+    background-color: rgb(239, 239, 239);
+    cursor: pointer;
+}
