@@ -10,7 +10,7 @@ main {
     colunas quanto forem necessárias. */
     columns: 215px auto;
     column-gap: 15px;
-    column-fill: auto;
+    column-fill: balance;
 }
 
 .pin {
