@@ -1,16 +1,15 @@
 main {
-    width: 90%;
     max-width: 90%;
     margin: 20px auto;
 }
 
 #columns {
-    /* Evita que as colunas tenham menos de 200px
+    /* Evita que as colunas tenham menos de 215px
     de largura e permite que sejam criadas tantas
     colunas quanto forem necessárias. */
     columns: 215px auto;
     column-gap: 15px;
-    column-fill: balance;
+    column-fill: balance;   
 }
 
 .pin {
@@ -18,8 +17,10 @@ main {
     position: relative;
     /* Evita que o conteúdo de um pin seja quebrado */
     break-inside: avoid;
-    
     margin-bottom: 10px;
+    /* Ajuda na animação dos interaction buttons no momento
+    do save */
+    overflow: hidden;
 }
 
 .pin img {
@@ -41,6 +42,7 @@ main {
     top: 10px;
     right: 10px;
 
+    box-sizing: border-box;
     height: 40px;
     padding: 0px 15px;
     border: none;
@@ -55,25 +57,51 @@ main {
     visibility: hidden;
 }
 
+.save-button:hover {
+    background-color: rgb(190, 0, 0);
+    cursor: pointer;
+}
+
 .interaction-buttons {
     position: absolute;
     bottom: 14px;
     right: 9px;
 
+    display: flex;
+    justify-content: space-between;
+    gap: 9px;
+
+    width: auto;
+
+    overflow: hidden;
     visibility: hidden;
+    transition: right 0.5s;
 }
 
-.inbox-button, .options-button {
+.interaction-buttons button:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.inbox-button, .options-button, .edit-button {
     height: 35px;
     width: 35px;
     border: none;
     border-radius: 100%;
 
-    background-color: rgba(255, 255, 255, 0.726);
+    background-color: rgba(255, 255, 255, 0.65);
 
     font-size: 1.03em;
 }
 
+.edit-button {
+    opacity: 0%;
+}
+
+.edit-button.show {
+    opacity: 100%;
+    transition: opacity 1.3s;
+}
 
 .pin:hover button {
     visibility: visible;

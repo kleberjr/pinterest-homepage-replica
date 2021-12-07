@@ -74,6 +74,10 @@
         content: none;
     }
 
+    header > #right-wrapper {
+        padding-top: 10px;
+    }
+
     main {
         margin: 10px auto;
     }
@@ -84,9 +88,5 @@
 
     .logo-img {
         height: 45px;
-    }
-
-    header > #right-wrapper {
-        padding-top: 10px;
     }
 }

@@ -1,0 +1,289 @@
+/* ====== SAVE NOTIFIER ====== */
+
+.save-notifier {
+    position: fixed;
+    bottom: -100px;
+    /* bottom: 30px; */
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    box-sizing: border-box;
+    height: 100px;
+    width: 325px;
+    padding: 25px 30px;
+    border-radius: 50px;
+    margin: auto;
+    
+    background-color: black;
+    color: white;
+
+    transition: bottom 0.3s;
+}
+
+.save-notifier:hover {
+    bottom: 30px;
+}
+
+.save-notifier div:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 0.96rem;
+    gap: 3px;
+}
+
+.save-notifier div:nth-of-type(2) a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.save-notifier div:nth-of-type(2) a:hover {
+    text-decoration: underline;
+}
+
+.save-notifier .button {
+    background-color: white;
+    
+    color: black;
+    font-weight: bold;
+}
+
+.save-notifier .button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.save-notifier .icon {
+    border-radius: 5px;
+
+    color: black;
+    background-color: #f9f9f9;
+}
+
+
+
+/* ====== SETTINGS POPUP ====== */
+
+#settings-popup {
+    position: fixed;
+    top: 60px;
+    right: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+    box-sizing: border-box;
+    width: 270px;
+    height: 525px;
+    padding: 15px 10px;
+    box-shadow: 0px 0px 20px -9px rgb(0 0 0 / 50%);
+
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    display: none;
+}
+
+.optgroup {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* gap: 10px; */
+    width: 100%;
+}
+
+.label {
+    color: rgb(90, 90, 90);
+    font-size: 0.8rem;
+    font-weight: lighter;
+    padding: 8px;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    border-radius: 8px;
+
+    font-size: 0.95rem;
+}
+
+.option:hover {
+    background-color: rgb(239, 239, 239);
+    cursor: pointer;
+}
+
+#settings-popup .logo-img {
+    width: auto;
+    padding: 0;
+}
+
+#settings-popup img {
+    width: 60px;
+}
+
+#personal-info {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    gap: 5px;
+
+    width: 150px;
+}
+
+#personal-info p:first-child {
+    font-size: initial;
+    color: black;
+    font-weight: 700;
+}
+
+#personal-info > p {
+    color: rgb(150, 150, 150);
+    font-size: 0.85rem;
+    font-weight: lighter;
+}
+
+
+
+/* ====== CRIAR PIN POPUP ====== */
+
+.criar-pin-popup {
+    position: fixed;
+    bottom: 64px;
+    right: 112px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 290px;
+    height: 130px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px -9px rgb(0 0 0 / 50%);
+    
+    background-color: white;
+    overflow: hidden;
+    display: none;
+}
+
+#baixar-botão, #criar-pin {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    box-sizing: border-box;
+    padding: 15px;
+
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+#baixar-botão:hover, #criar-pin:hover {
+    background-color: rgb(239, 239, 239);
+    cursor: pointer;
+}
+
+#baixar-botão {
+    flex: 3;
+
+    width: 100%;
+    border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+#criar-pin {
+    flex: 0.8;
+
+    width: 100%;
+}
+
+#criar-pin i {
+    font-size: 1.2rem;
+}
+
+#baixar-botão img {
+    width: 25px;
+}
+
+
+
+/* ====== HELP-POPUP ====== */
+
+.help-popup {
+    position: fixed;
+    bottom: 37px;
+    right: 102px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 330px;
+    height: 180px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px -9px rgb(0 0 0 / 50%);
+
+    background-color: white;
+    overflow: hidden;
+    display: none;
+}
+
+.help-popup > div:nth-of-type(1), .help-popup > div:nth-of-type(2) {
+    flex: 0.95;
+    
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0px 18px;
+
+    font-size: 0.84rem;
+    font-weight: 700;
+}
+
+.help-popup > div:last-child {
+    flex: 2.1;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 7px;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 0px 18px;
+    border-top: 1px solid rgb(209, 209, 209);
+}
+
+.help-popup > div:nth-of-type(1):hover, .help-popup > div:nth-of-type(2):hover {
+    background-color: rgb(239, 239, 239);
+    cursor: pointer;
+}
+
+.help-popup a {
+    margin-right: 5px;
+    
+    text-decoration: none;
+    color: rgb(128, 128, 128);
+    font-size: 0.87rem;
+    font-weight: bold;
+}
+
+.help-popup a:hover {
+    text-decoration: underline;
+}
