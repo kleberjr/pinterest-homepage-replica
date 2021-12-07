@@ -7,42 +7,115 @@
     <title>Pinterest</title>
 
     <script src="https://kit.fontawesome.com/97078e6c91.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/popups_and_animations.css">
     <link rel="stylesheet" href="styles/media-query.css">
-    
 </head>
+
 
 <body>
     <header>
         <div id="left-wrapper">
-            <div class="logo-img">
-                <img src="images/logo.png" alt="Logo">
+            <div id="logo-wrapper">
+                <div class="logo-img">
+                    <img src="images/logo.png" alt="Logo">
+                </div>
             </div>
-            <div class="button">Página inicial</div>
+            <div class="button" id="pagina-inicial">Página inicial</div>
             <div class="button" id="hoje">Hoje</div>
         </div>
         
         <div id="search-box">
             <input type="text" placeholder="Pesquisar">
         </div>
-        
+
         <div id="right-wrapper">
             <div class="icon" id="search-icon">
                 <i class="fas fa-search"></i>
             </div>
+            
             <div class="icon">
                 <i class="fas fa-bell"></i>
             </div>
+            
             <div class="icon">
                 <i class="fas fa-comment-dots"></i>
             </div>
+
             <div class="logo-img">
                 <img src="https://avatars.githubusercontent.com/u/62402753?s=400&u=cc81e4915f4f13b853bdee49249e17e425808d29&v=4" alt="">
             </div>
-            <div class="icon" id="chevron-down">
-                <i class="fas fa-chevron-down"></i>
+
+            <div id="icon-wrapper">
+                <div class="icon" id="settings-button">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+
+        <div id="settings-popup">
+            <div class="optgroup">
+                <p class="label">Atualmente em</p>
+                
+                <div class="option">
+                    <div class="logo-img">
+                        <img src="https://avatars.githubusercontent.com/u/62402753?s=400&u=cc81e4915f4f13b853bdee49249e17e425808d29&v=4" alt="">
+                    </div>
+                        
+                    <div id="personal-info">
+                        <p>Kleber Rodrigues</p>
+                        <p>Pessoal</p>
+                        <p>kleb3r.jr@gmail.com</p>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="optgroup">
+                <p class="label">Suas contas</p>
+
+                <div class="option">
+                    <p>Adicionar conta</p>
+                </div>
+
+                <div class="option">
+                    <p>Converter em conta business</p>
+                </div>
+            </div>
+            
+            <div class="optgroup">
+                <p class="label">Mais opções</p>
+
+                <div class="option">
+                    <p>Configurações</p>
+                </div>
+                
+                <div class="option">
+                    <p>Ajustar o feed inicial</p>
+                </div>
+                
+                <div class="option">
+                    <p>Instalar o aplicativo Windows</p>
+                </div>
+                
+                <div class="option">
+                    <p>Obter ajuda</p>
+                    <i class="fas fa-external-link-alt"></i>
+                </div>
+                
+                <div class="option">
+                    <p>Ver os termos de uso e privacidade</p>
+                    <i class="fas fa-external-link-alt"></i>
+                </div>
+                
+                <div class="option">
+                    <p>Sair</p>
+                </div>
             </div>
         </div>
     </header>
@@ -51,8 +124,9 @@
         <div id="columns">
             <div class="pin">
                 <img src="images/img_10.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -60,8 +134,9 @@
 
             <div class="pin">
                 <img src="images/img_9.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -69,8 +144,9 @@
 
             <div class="pin">
                 <img src="images/img_3.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -78,8 +154,9 @@
 
             <div class="pin">
                 <img src="images/img_5.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -87,8 +164,9 @@
 
             <div class="pin">
                 <img src="images/img_1.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -96,8 +174,9 @@
 
             <div class="pin">
                 <img src="images/img_6.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -105,8 +184,9 @@
 
             <div class="pin">
                 <img src="images/img_2.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -114,8 +194,9 @@
 
             <div class="pin">
                 <img src="images/img_7.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -123,8 +204,9 @@
 
             <div class="pin">
                 <img src="images/img_8.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -132,16 +214,19 @@
 
             <div class="pin">
                 <img src="images/img_4.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
             </div>
+
             <div class="pin">
                 <img src="images/img_10.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -149,8 +234,9 @@
 
             <div class="pin">
                 <img src="images/img_9.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -158,8 +244,9 @@
 
             <div class="pin">
                 <img src="images/img_3.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -167,8 +254,9 @@
 
             <div class="pin">
                 <img src="images/img_5.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -176,8 +264,9 @@
 
             <div class="pin">
                 <img src="images/img_1.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -185,8 +274,9 @@
 
             <div class="pin">
                 <img src="images/img_6.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -194,8 +284,9 @@
 
             <div class="pin">
                 <img src="images/img_2.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -203,8 +294,9 @@
 
             <div class="pin">
                 <img src="images/img_7.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -212,8 +304,9 @@
 
             <div class="pin">
                 <img src="images/img_8.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -221,16 +314,19 @@
 
             <div class="pin">
                 <img src="images/img_4.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
             </div>
+
             <div class="pin">
                 <img src="images/img_3.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -238,8 +334,9 @@
 
             <div class="pin">
                 <img src="images/img_5.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -247,8 +344,9 @@
 
             <div class="pin">
                 <img src="images/img_1.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -256,8 +354,9 @@
 
             <div class="pin">
                 <img src="images/img_6.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -265,8 +364,9 @@
 
             <div class="pin">
                 <img src="images/img_2.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -274,8 +374,9 @@
 
             <div class="pin">
                 <img src="images/img_7.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -283,8 +384,9 @@
 
             <div class="pin">
                 <img src="images/img_8.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -292,16 +394,19 @@
 
             <div class="pin">
                 <img src="images/img_4.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
             </div>
+
             <div class="pin">
                 <img src="images/img_3.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -309,8 +414,9 @@
 
             <div class="pin">
                 <img src="images/img_5.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -318,8 +424,9 @@
 
             <div class="pin">
                 <img src="images/img_1.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -327,8 +434,9 @@
 
             <div class="pin">
                 <img src="images/img_6.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -336,8 +444,9 @@
 
             <div class="pin">
                 <img src="images/img_2.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -345,8 +454,9 @@
 
             <div class="pin">
                 <img src="images/img_7.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -354,8 +464,9 @@
 
             <div class="pin">
                 <img src="images/img_8.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
                     <button class="inbox-button"><i class="fas fa-inbox"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
@@ -363,18 +474,86 @@
 
             <div class="pin">
                 <img src="images/img_4.jpg" alt="">
-                <button class="save-button">Salvar</button>
+                <button class="save-button" onclick="savePin(this)">Salvar</button>
                 <div class="interaction-buttons">
-                    <button class="inbox-button"><i class="fas fa-inbox"></i></button>
+                    <button class="edit-button"><i class="fas fa-pen"></i></button>
+                    <button class="inbox-button"><i class="fas fa-inbox" id="inbox-icon"></i></button>
                     <button class="options-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
             </div>
         </div>
     </main>
 
-    <div class="fixed-buttons">
-            <button type="button">+</button>
-            <button type="button">?</button>
+    <div class="save-notifier">
+        <div class="icon">
+            <i class="fas fa-history"></i>
+        </div>
+
+        <div>
+            <p>Salvo na pasta</p>
+            <p><a href="#">Perfil</a></p>
+        </div>
+        
+        <div class="button">Alterar</div>
     </div>
+
+    <div class="criar-pin-popup">
+        <div id="baixar-botão">
+            <div id="baixar-botão-img">
+                <img src="images/logo_pb.png" alt="">
+            </div>
+
+            <div>
+                <p>Baixe nosso botão para navegador e salve ideias ainda mais rapidamente</p>
+            </div>
+        </div>
+
+        <div id="criar-pin">
+            <div>
+                <i class="fas fa-plus"></i>
+            </div>
+
+            <div>
+                <p>Criar um Pin</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="help-popup">
+        <div>
+            <p>Acessar a Central de Ajuda</p>
+        </div>
+
+        <div>
+            <p>Criar widget</p>
+        </div>
+
+        <div>
+            <div>
+                <a href="#">Sobre</a>
+                <a href="#">Imprensa</a>
+                <a href="#">Empresa</a>
+                <a href="#">Carreiras</a>
+            </div>
+
+            <div>
+                <a href="#">Desenvolvedores</a>
+                <a href="#">Remoções</a>
+                <a href="#">Privacidade</a>
+            </div>
+
+            <div>
+                <a href="#">Anúncios personalizados</a>
+                <a href="#">Termos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed-buttons">
+            <button type="button" id="criar-pin-button">+</button>
+            <button type="button" id="help-button">?</button>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
