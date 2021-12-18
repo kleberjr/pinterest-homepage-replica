@@ -58,7 +58,28 @@ header {
     min-width: 168px;
 }
 
+.mobile-navigation {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    box-sizing: border-box;
+    z-index: 1;
+    width: 70%;
+    height: 55px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 50px;
+
+    background-color: white;
+
+    display: none;
+}
 
 /* ======= SEARCH BOX ======= */
 
@@ -119,7 +140,7 @@ input {
     background-color: rgb(239, 239, 239);
 }
 
-header img {
+.logo-img img {
     width: 100%;
     clip-path: circle(50% at 50% 50%);
 }
