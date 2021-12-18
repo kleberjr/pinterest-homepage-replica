@@ -63,6 +63,8 @@ logoImg.addEventListener('mouseup', function() {
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 const saveNotifier = document.querySelector('.save-notifier');
+const appNotifier = document.querySelector('.app-notifier')
+const fade = document.querySelector('.fade');
 
 // Ativa a transição do CSS para criar o efeito de animação.
 function popUpSaveNotifier() {
@@ -93,6 +95,18 @@ function savePin(saveButton) {
         
         setTimeout(popDownSaveNotifier, 3000);
     }, 1000)
+}
+
+function popUpAppNotifier() {
+    if (window.innerWidth <= 500) {
+        appNotifier.style.display = 'flex';
+        fade.style.display = 'initial';
+    } 
+}
+
+function popDownAppNotifier() {
+    appNotifier.style.display = 'none';
+    fade.style.display = 'none';
 }
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
