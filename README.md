@@ -8,7 +8,8 @@ Este é um projeto feito EXCLUSIVAMENTE por mim de forma ORIGINAL, sem qualquer 
 - Alguns detalhes como fontes e ícones podem ser diferentes da homepage oficial do Pinterest, pois eu não consegui encontrar os corretos (ou eu encontrei, mas eram pagos).
 - Aparentemente há um bug no Safari e eu não tenho ideia do porquê. Não tem como consertar, pois eu não possuo nenhum Macbook, então é impossível acessar o Safari para debugar.
 
-Visualize em: https://kleberjr.github.io/pinterest-homepage-replica/
+## Visualise o projeto
+https://kleberjr.github.io/pinterest-homepage-replica/
 
 <br>
 
@@ -22,4 +23,5 @@ This is a hands-on self-made project, without copying any code or watching any t
 - Some details in the desing such as fonts and icons may differ from the official Pinterest homepage, because I couldn't find the correct ones (or I found, but it wasn't free to use).
 - Apparently there is a little bug in Safari and I have no idea why. It can't be fixed because I have no Mac devices, therefore I can't acess Safari and debbug it.
 
-Visualize in https://kleberjr.github.io/pinterest-homepage-replica/
+## Visualize the project
+https://kleberjr.github.io/pinterest-homepage-replica/
